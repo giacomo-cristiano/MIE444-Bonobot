@@ -271,24 +271,24 @@ def decide_next_move(sensor_data):
                 next_move = 'turn left'
                 
         # If front or angled sensors detect obstacles
-        # if not obstacles['left'] and last_move != 'left':
-        #     next_move = 'turn left'
-        # elif not obstacles['right'] and last_move != 'right':
-        #     next_move = 'turn right'
-        # elif not obstacles['fl'] and last_move != 'move forward':
-        #     next_move = 'move forward'  # If forward left is clear
-        # elif not obstacles['fr'] and last_move != 'move forward':
-        #     next_move = 'move forward'  # If forward right is clear
-        # else:
-        #     # If all directions are blocked, back up or turn randomly
-        #     if last_move != 'move backward':
-        #         next_move = 'move backward'
-        #     else:
-        #         if right>left:
-        #             next_move = 'turn right'
-        #         else:
-        #             next_move = 'turn left'
-        #         #next_move = random.choice(['turn left', 'turn right'])
+        if not obstacles['left'] and last_move != 'left':
+            next_move = 'turn left'
+        elif not obstacles['right'] and last_move != 'right':
+            next_move = 'turn right'
+        elif not obstacles['fl'] and last_move != 'move forward':
+            next_move = 'move forward'  # If forward left is clear
+        elif not obstacles['fr'] and last_move != 'move forward':
+            next_move = 'move forward'  # If forward right is clear
+        else:
+            # If all directions are blocked, back up or turn randomly
+            if last_move != 'move backward':
+                next_move = 'move backward'
+            else:
+                if right>left:
+                    next_move = 'turn right'
+                else:
+                    next_move = 'turn left'
+                #next_move = random.choice(['turn left', 'turn right'])
     else:
         if left > front and left > right:
             next_move = 'rotate left'
