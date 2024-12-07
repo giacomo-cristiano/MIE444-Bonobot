@@ -234,9 +234,9 @@ while RUN_COMMUNICATION_CLIENT:
         
 import random
 # Constants
-THRESHOLD_DISTANCE = 1.5
-THRESHOLD_DISTANCE1 = 3.5
-THRESHOLD_DISTANCE2 = 1
+THRESHOLD_DISTANCE = 1.5 # front 
+THRESHOLD_DISTANCE1 = 3.5 # diagonal 
+THRESHOLD_DISTANCE2 = 1 # lateral 
 MAX_SAME_MOVES = 3       # Threshold for repeating the same move
 
 # Initialize movement history
